@@ -35,13 +35,15 @@ VALUES('$nome','$categoria','$tempo_preparo','$rendimento','$ingredientes','$mod
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/enviarReceita.css">
-    <link rel="shortcut icon" type="imagex/png" href="./img/logo.png">
+    <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
+
     <title>Enviar Receita</title>
+
 </head>
 
-
-
 <body>
+
+    <!-----------------------------MENU PRINCIPAL--------------------------------------->
     <header class="menu-principal">
         <main>
             <div class="header-1">
@@ -55,12 +57,6 @@ VALUES('$nome','$categoria','$tempo_preparo','$rendimento','$ingredientes','$mod
                 </div>
 
                 <a href="../form/enviarReceita.php" class="button">Enviar Sua Receita</a>
-
-
-
-                <!--COMO LINKAR PÁGINAS HTML-->
-                <!-- Local - <a href="../pages/pagina2.html">Pagina 2</a>
-Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
 
             </div>
             </div>
@@ -97,7 +93,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
 
     <!-- FORMULÁRIO -->
     <div class="box">
-        <form action="enviarReceita.php" method="POST" style="width: 50%; margin: 0px auto;">
+        <form method="POST" style="width: 50%; margin: 0px auto;">
 
             <br><br><br><br><br> <br>
 
@@ -110,7 +106,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome da Receita*</label>
                 </div>
-                <br><br>--
+                <br><br>
                 <!-- INSERINDO IMAGEM -->
                 <fieldset class="borda">
                     <legend class="title">Foto da Receita</legend>
@@ -124,7 +120,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
 
                         • Cada foto deve ter no máximo 5mb.</h4>
                     <div class="inputBox">
-                        <input type="file" id="flimage" name="flimage" accept="image/*" required>
+                        <input type="file" id="flimage" name="flimage" accept="image/*">
                         <label for="nome" class="labelInput"></label>
                     </div>
                 </fieldset>
@@ -147,7 +143,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                 <div class="inputBox">
 
                     <!--  PREPARO, RENDIMENTO E IGREDIENTES -->
-                    <input type="text" id="edit-tempo-de-preparo" name="tempo_de_preparo" value="" size="3" maxlength="255" required>
+                    <input type="text" id="edit-tempo-de-preparo" name="tempo_de_preparo" value="" size="3" maxlength="2">
 
                     <label for="edit-tempo-de-preparo" class="labelInput">Tempo de Preparo*
                         <span>(preparo + cozimento (minutos))</span></label>
@@ -156,7 +152,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                 <br><br>
 
                 <div class="inputBox">
-                    <input name="porcao" type="text" value="" size="3" maxlength="255" required="required" required>
+                    <input name="porcao" type="text" value="" size="3" maxlength="2" required="required">
                     <label for="porcao" class="labelInput">Rendimento(porção)*
                     </label>
 
@@ -175,7 +171,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                     <div class="inputBox">
                         <label for="edit-ingredientes" class="labelInpu">Ingredientes</label>
                         <div>
-                            <textarea name="ingredi" id="edit-ingredientes" rows="4" cols="60" required></textarea>
+                            <textarea name="ingredi" id="edit-ingredientes" rows="4" cols="60" require></textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -190,7 +186,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                         • Se quiser, inclua um tópico de dica especial da sua receita.</h4>
 
                     <div class="inputBox">
-                        <label for="edit-ingredientes" class="labelInpu">Modo de Preparo</label>
+                        <label for="edit-ingredientes" class="labelInpu" require>Modo de Preparo</label>
                         <div>
                             <textarea name="modo-preparo" rows="4" cols="60" required="required" aria-required="true"></textarea>
                         </div>
@@ -198,12 +194,36 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                 </fieldset>
                 <!-- ENVIAR RECEITA -->
                 <br><br>
-                <input class="enviar" type="submit" onclick="funcao1()" name="submit" id="submit">
-                <script>
-                    function funcao1() {
-                        alert("Receita Enviada com Sucesso");
+                <button onclick="redirecionar();" type="submit" id="submit" name="submit">Enviar Receita</button>
+                <script type="text/javascript">
+                    function redirecionar() {
+
+                        if (confirm("Deseja Enviar receita?")) {
+                            alert("você pressionou OK! Receita enviada com sucesso");
+                            window.location.href = "http://localhost/VeganFood-main/form/enviarReceita.php";
+                        } else
+
+                            alert("você pressionou Cancelar! Sua receita não foi enviada");
+
+                        /*window.location.href = "http://localhost/VeganFood-main/index.html";*/
+
                     }
                 </script>
+                <style>
+                    #submit {
+                        background-color: #4CAF50;
+                        border: 1;
+                        color: white;
+                        padding: 10px 30px;
+                        text-align: center;
+                        margin-left: 40%;
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        cursor: pointer;
+                    }
+                </style>
+
             </fieldset>
         </form>
     </div>
@@ -250,22 +270,30 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                 </div>
                 <div class="col-4">
                     <h3><b>Especiais</b></h3>
-                    <p class="letra-branca">Salada Grega Vegana</p>
-                    <p class="letra-branca">Molho Branco de Tofu</p>
-                    <p class="letra-branca">Sorvete de Chocolate Vegano</p>
-                    <p class="letra-branca">Pastel Vegano Simples</p>
+                    <a href="../saladaReceitas/saladagrega.html">
+                        <p class="letra-branca">Salada Grega Vegana</p>
+                    </a>
+                    <a href="../saladaReceitas/molhobranco.html">
+                        <p class="letra-branca">Molho Branco de Tofu</p>
+                    </a>
+                    <a href="../doceRceitas/sorvete.html">
+                        <p class="letra-branca">Sorvete de Chocolate Vegano</p>
+                    </a>
+                    <a href="../lancheReceitas/pastel.html">
+                        <p class="letra-branca">Pastel Vegano Simples</p>
+                    </a>
 
                 </div>
                 <div class="col-4">
                     <h3><b>Sobre</b></h3>
-                    <p>Quem somos</p>
+
                     <a href="../termo.html" class="letra-branca">
                         <p>Termos de uso e
                             política de privacidade</p>
                     </a>
-                    <p>Contato</p>
-
                 </div>
+
+                <!--------------------------------------------------------->
                 <div class="col-4">
                     <h3><b>Localização</b></h3>
                     <p>
@@ -296,6 +324,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
     <script type="text/javascript" src="../js/jquery-migrate.js"></script>
     <script type="text/javascript" src="../js/slick.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
 </body>
 
 </html>

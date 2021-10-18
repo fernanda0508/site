@@ -39,6 +39,22 @@ position: relative;
 
 }
 
+.cada {
+    border: 1;
+    color: white;
+    margin-left: 10%;
+    margin-top: -90px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
 /* Estiliza o Menu das categorias */
 .header-2 {
 background-color: #ffffff;

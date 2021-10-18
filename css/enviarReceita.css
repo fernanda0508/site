@@ -150,25 +150,12 @@ body {
         padding: 5px;
         background-color: 	#E0FFFF;
     }
-    .enviar {
-        background-color: #4CAF50;
-        border: 1;
-        color: white;
-        padding: 10px 30px;
-        text-align: center;
-        margin-left: 40%;
-        text-decoration: none;
-        font-size: 12px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        cursor: pointer;
-    }
+    
     input, select, textarea{
 
         border: 1px solid black;
         border-radius: 5px;
         padding: 5px 10px;
-
-
     }
 
     .title{

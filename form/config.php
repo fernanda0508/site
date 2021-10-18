@@ -26,4 +26,3 @@ mysqli_query($conexao, 'SET character_set_results=utf8');
 //} else {
    // echo "Conexão Efetuada com Sucesso";
 //}
-
