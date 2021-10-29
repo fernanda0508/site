@@ -5,6 +5,12 @@ $dbUsername = 'root';
 $dbPassword = '';
 $dbName = 'enviareceita';
 
+//$dbHost = 'Localhost';
+//$dbUsername = 'metane68_fer';
+//$dbPassword = '$Fer0508';
+//$dbName = 'metane68_enviareceita';
+
+
 $conexao = new mysqli(
     $dbHost,
     $dbUsername,

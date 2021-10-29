@@ -4,17 +4,399 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/enviarReceita.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/enviarReceita.css">-->
     <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
     <title>Receita - Saladas e Molhos</title>
 </head>
+
+<style>
+    /* Estilizando o body*/
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    ul {
+        padding: 0px !important;
+    }
+
+    /* Estilizando o 1° menu*/
+    .menu-principal {
+        width: 100%;
+        background-color: #f5f5f5;
+        height: 100px;
+    }
+
+    main,
+    .content {
+        margin: 0 auto;
+        width: 980px;
+        position: relative;
+
+    }
+
+    .logo {
+        float: left;
+        padding: -10px;
+        width: 70%;
+    }
+
+    .button {
+        background-color: #4CAF50;
+        border: 1;
+        color: white;
+        margin-left: 58%;
+        margin-top: -90px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .busca {
+        text-align: center;
+        width: 30%;
+        float: right;
+    }
+
+    .busca input {
+        background-image: url(../img/icone-search.png);
+        /* Inserindo imagem dentro do botão "buscar"*/
+        background-repeat: no-repeat;
+        /*comando para não repertir a imagem*/
+        height: 36px;
+        padding: 12px;
+        width: 190px;
+        margin-top: 40px;
+        background-position: 96%;
+        /* difinição imagem pra direita*/
+        border: 1px solid #d6d6d6;
+    }
+
+    /* Estiliza o Menu das categorias */
+    .header-2 {
+        background-color: #ffffff;
+        width: 1280px;
+        /* Deixando as categorias 1 do lado da outra */
+        margin: 0 auto;
+        padding: -10px;
+        /* deixa o nome das categorias mais emcima ou mais embaixo*/
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    .menu-urls {
+        height: 80px;
+        border-bottom: 3px solid #efefef;
+
+    }
+
+    .menu ul li {
+        display: inline-block;
+        color: #8b8b8b;
+        margin-left: 15px;
+        height: 50px;
+
+    }
+
+    .menu ul li:hover {
+        border-bottom: 3px solid #00bac6;
+    }
+
+    .menu ul li a:hover {
+        color: #00bac6;
+
+    }
+
+    .menu ul li a {
+        color: #008000;
+        /* COR DAS CATEGORIAS*/
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .menu {
+        width: 70%;
+        float: left;
+        text-align: center;
+    }
+
+    /* Estiliza o Rodapé*/
+
+
+    /* Padronizando classe col-100*/
+    .col-100 {
+        width: 100%;
+        float: left;
+        position: relative;
+
+    }
+
+
+    h3 {
+        font-weight: normal !important;
+    }
+
+    /* FORMULÁRIO*/
+
+    fieldset {
+        background-color: #FFFFE0;
+    }
+
+    .borda {
+        border-radius: 10px;
+    }
+
+    legend {
+        text-align: center;
+        border: 2px green solid;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #E0FFFF;
+
+    }
+
+    label,
+    legend,
+    h4 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+
+    label {
+        font-size: 15px;
+        color: black;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    /*TITULO DE ENVIAR RECEITA*/
+    .titulo-principal {
+        color: green;
+        border: 2px green solid;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #E0FFFF;
+    }
+
+    input,
+    select,
+    textarea {
+
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+
+    .title {
+        color: green;
+
+    }
+
+    /*PÁGINA DE RECEITAS*/
+    .receitas {
+        background-color: #ffffff;
+    }
+
+    p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+
+    table {
+        border: 5px solid green;
+    }
+
+    table td {
+        border: 3px solid green;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: left;
+
+    }
+
+
+    /* Estilizando Rodapé*/
+    .letra-branca {
+
+        color: white;
+        text-decoration: none;
+
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .col-4 {
+        float: left;
+        width: 25%;
+        text-align: center;
+
+    }
+
+    .col-4 img {
+        cursor: pointer;
+        margin: 0 auto;
+        padding-top: 1em;
+        vertical-align: middle;
+    }
+
+    .col-4 img:hover {
+        margin-top: 10px !important;
+        position: relative !important;
+    }
+
+
+    .bloco-logos {
+        height: 170px;
+    }
+
+    .bloco-logos img {
+        margin-top: 50px;
+        height: 100px;
+    }
+
+    .footer h3 {
+        text-align: left;
+    }
+
+    .footer {
+        background-image: url('../img/footer.png');
+        color: #ffffff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    .footer-2 {
+        background-image: url('../img/footer2.png');
+        color: #c1c1c1;
+        height: 90px;
+    }
+
+
+    .footer p {
+        width: 90%;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .footer-2 p {
+        padding: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .clock {
+        color: #898989 !important;
+    }
+
+    .clock:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background-image: url('../img/clock.png');
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+    }
+
+    .local:before,
+    .emailico:before,
+    .telefoneico:before {
+        content: '';
+        width: 17px;
+        height: 24px;
+        display: inline-block;
+        float: left;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+    }
+
+    .local:before {
+        background-image: url('../img/local.png');
+    }
+
+    .emailico:before {
+        background-image: url('../img/emailico.png');
+    }
+
+    .telefoneico:before {
+        background-image: url('../img/telefoneico.png');
+    }
+
+    /* BLOCO DE RECEITAS E CATEGORIAS*/
+    .col-3 {
+        width: 31%;
+        float: left;
+        position: relative;
+        text-align: center;
+
+
+    }
+
+    .bloco-imagem img {
+        margin: 0 auto;
+        width: 90%;
+        /* tamanho das imagens do 3° bloco*/
+        height: auto;
+        margin-left: 0 auto;
+
+    }
+
+    .bloco-imagem {
+        height: 315px;
+        border: 1px solid hsla(0, 0%, 77%, 0.986);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 10px;
+        cursor: pointer;
+
+    }
+
+    .bloco-imagem p {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+    }
+
+
+    .bloco-texto {
+        margin-top: 3em;
+
+
+    }
+
+    h3 {
+        font-weight: normal !important;
+    }
+
+    .bloco-imagens-texto {
+        background-color: hsla(0, 0%, 77%, 0.096);
+    }
+</style>
+
 
 <body>
     <header class="menu-principal">
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <a href="../index.html">
+                    <a href="../inicial.php">
                         <img src="../img/veganfood.png" width="130" height="130" />
                     </a>
                 </div>
@@ -23,12 +405,6 @@
                 </div>
 
                 <a href="../form/enviarReceita.php" class="button">Enviar Sua Receita</a>
-
-
-
-                <!--COMO LINKAR PÁGINAS HTML-->
-                <!-- Local - <a href="../pages/pagina2.html">Pagina 2</a>
-Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
 
             </div>
             </div>
@@ -39,7 +415,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="../index.html">HOME</a>
+                        <a href="../inicial.php">HOME</a>
                     </li>
                     <li>
                         <a href="../categoria/cafemanha.html">Café da Manhã</a>

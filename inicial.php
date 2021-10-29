@@ -1,3 +1,10 @@
+<?php
+
+//INDICANDO PRA ONDE O LOGIN VAI ENVIAR O USUÁRIO
+session_start();
+
+?>
+
 <html>
 
 <head>
@@ -8,47 +15,59 @@
     <link rel="stylesheet" type="text/css" href="./css/slick.css" />
     <link rel="shortcut icon" type="imagex/png" href="./img/logo.png">
 
-    <title>Home - Vegan Food</title>
+    <title>Vegan Food</title>
 
 </head>
 
 <body>
 
+    <!--Menu principal do sistema-->
+
     <header class="menu-principal">
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <a href="./index.html">
+                    <a href="./inicial.php">
                         <img src="./img/veganfood.png" width="130" height="130" />
                     </a>
                 </div>
                 <div class="busca">
                     <input placeholder="Pesquisar" type="text" />
                 </div>
-
-
+                <!--BOTÃO DE ENVIAR RECEITA-->
 
                 <a href="./form/enviarReceita.php" class="button">Enviar Sua Receita</a>
 
+                <!--ESTILIZANDO O BOTÃO DE SAIR-->
 
+                <style>
+                    .sair {
 
-
-
-
-                <!--COMO LINKAR PÁGINAS HTML-->
-                <!-- Local - <a href="../pages/pagina2.html">Pagina 2</a>
-Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
-
+                        color: black;
+                        /*
+                        margin-left: 100%;
+                        margin-top: -90px;
+                        padding: 10px 20px;*/
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 15px;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    }
+                </style>
             </div>
             </div>
         </main>
     </header>
 
+    <!--CATEGORIA DE CADA RECEITA-->
 
     <main class="col-100 menu-urls">
         <div class="header-2  ">
             <div class="menu">
                 <ul>
+
+
                     <li>
                         <a href="./categoria/cafemanha.html">Café da Manhã</a>
                     </li>
@@ -64,11 +83,28 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
                     <li>
                         <a href="./categoria/lanche.html">Lanche</a>
                     </li>
+                    <!--BOTÃO DE SAIR DO SISTEMA-->
+                    <form class="sair">
+                        <a class="sair" href="./index.php">Sair</a>
+                    </form>
+                    <style>
+                        .sair {
+                            color: red;
+                            /* COR DAS CATEGORIAS*/
+                            text-decoration: none;
+                            margin-left: 15px;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                        }
+                    </style>
+
+
                 </ul>
             </div>
 
         </div>
     </main>
+    <!--CARROSSEL-->
     <div class="col-100">
         <div class="slider-principal">
             <img src="./img/banner02.png" />
@@ -77,6 +113,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
 
         </div>
     </div>
+    <!--2° CONTAINER DA PÁGINA HOME-->
     <div class="col-100">
         <div class="content texto-destaque">
             <h1>Vejas as receitas <strong>mais recomendadas</strong></h1>
@@ -103,7 +140,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
             </div>
         </div>
     </div>
-
+    <!--ATALHO PARA AS CATEGORIAS-->
     <div id="cont" class="col-100 bloco-imagens-texto">
         <div class="content" style="margin-left: 15%; float: left;">
             <div class="col-3 bloco-texto bloco-imagem">
@@ -187,6 +224,8 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
         </div>
     </div>
 
+    <!--BLOCO COM IMAGENS DA NESTLÉ E TUDO GOSTOSO-->
+
     <div class="col-100 bloco-logos">
         <div class="content">
             <div class="col-4">
@@ -204,6 +243,8 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
             </div>
         </div>
     </div>
+
+    <!--RODAPÉ-->
     <footer>
         <div class="col-100 footer">
             <div class=" content">
@@ -276,6 +317,7 @@ Redirecionará ao arquivo pagina2.html pertencente à pasta pages. -->
             </p>
         </div>
     </div>
+    <!--Scripts do Javascript-->
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/jquery-migrate.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>

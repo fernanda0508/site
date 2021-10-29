@@ -40,6 +40,7 @@ body {
         font-size: 12px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+
     .busca {
         text-align: center;
         width: 30%;
@@ -58,7 +59,7 @@ body {
     /* Estiliza o Menu das categorias */
     .header-2 {
     background-color: #ffffff;
-    width: 1280px; /* Deixando as categorias 1 do lado da outra */
+    width: 1285px; /* Deixando as categorias 1 do lado da outra */
     margin: 0 auto;
     padding: -10px; /* deixa o nome das categorias mais emcima ou mais embaixo*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -66,7 +67,7 @@ body {
     }
     
     .menu-urls {
-    height: 60px;
+    height: 80px;
     border-bottom: 3px solid #efefef;
    
     }
@@ -93,6 +94,8 @@ body {
         font-size: 18px;
         text-transform: uppercase;
     }
+
+
     .menu {
     width: 70%;
     float: left;

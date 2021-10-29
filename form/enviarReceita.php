@@ -48,7 +48,7 @@ VALUES('$nome','$categoria','$tempo_preparo','$rendimento','$ingredientes','$mod
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <a href="../index.html">
+                    <a href="../inicial.php">
                         <img src="../img/veganfood.png" width="130" height="130" />
                     </a>
                 </div>
@@ -67,7 +67,7 @@ VALUES('$nome','$categoria','$tempo_preparo','$rendimento','$ingredientes','$mod
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="../index.html">HOME</a>
+                        <a href="../inicial.php">HOME</a>
                     </li>
                     <li>
                         <a href="../categoria/cafemanha.html">Café da Manhã</a>
@@ -200,13 +200,10 @@ VALUES('$nome','$categoria','$tempo_preparo','$rendimento','$ingredientes','$mod
 
                         if (confirm("Deseja Enviar receita?")) {
                             alert("você pressionou OK! Receita enviada com sucesso");
-                            window.location.href = "http://localhost/VeganFood-main/form/enviarReceita.php";
+
                         } else
 
                             alert("você pressionou Cancelar! Sua receita não foi enviada");
-
-                        /*window.location.href = "http://localhost/VeganFood-main/index.html";*/
-
                     }
                 </script>
                 <style>
