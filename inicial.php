@@ -30,6 +30,7 @@ session_start();
                     <a href="./inicial.php">
                         <img src="./img/veganfood.png" width="130" height="130" />
                     </a>
+                    <!--Botão de Pesquisa-->
                 </div>
                 <div class="busca">
                     <input placeholder="Pesquisar" type="text" />
@@ -43,16 +44,14 @@ session_start();
                 <style>
                     .sair {
 
-                        color: black;
-                        /*
-                        margin-left: 100%;
-                        margin-top: -90px;
-                        padding: 10px 20px;*/
+                        color: red;
                         text-align: center;
                         text-decoration: none;
                         display: inline-block;
-                        font-size: 15px;
                         font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        margin-left: 15px;
+                        font-size: 18px;
+                        text-transform: uppercase;
                     }
                 </style>
             </div>
@@ -87,16 +86,7 @@ session_start();
                     <form class="sair">
                         <a class="sair" href="./index.php">Sair</a>
                     </form>
-                    <style>
-                        .sair {
-                            color: red;
-                            /* COR DAS CATEGORIAS*/
-                            text-decoration: none;
-                            margin-left: 15px;
-                            font-size: 18px;
-                            text-transform: uppercase;
-                        }
-                    </style>
+
 
 
                 </ul>

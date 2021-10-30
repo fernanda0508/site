@@ -22,6 +22,11 @@ if (isset($_POST['submit'])) {
         if ($row == 1) {
             $_SESSION['usuario'] = $nome_usuario;
             header('Location: inicial.php');
+        } else {
+            echo ("<script>
+        window.alert('Usuário ou Senha inválidos. Tente Novamente!')
+        window.location.href='index.php';
+    </script>");
         }
     }
 }
@@ -39,6 +44,19 @@ if (isset($_POST['submit'])) {
 
     <!--estilizando o tela de login-->
     <style>
+        .avisoOff {
+            display: none;
+        }
+
+
+        .avisoOn span.txt {
+            font-size: 2rem;
+        }
+
+        .aviso span {
+            font-size: 1.1rem;
+        }
+
         body {
             font-family: 'Arial Narrow', Arial, sans-serif;
         }
